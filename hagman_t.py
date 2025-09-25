@@ -16,9 +16,8 @@ class Hangman_Drawing:
         self.tim.reset()
         self.tim.hideturtle()
         self.tim.speed(0)
-        self.reset_pen("saddlebrown", 8)  # brown gallows, thick
+        self.reset_pen("saddlebrown", 8)  
 
-        # Gallows centered on negative x-axis (spanning Q2 + Q3)
         self.tim.penup()
         self.tim.goto(-400, -300)
         self.tim.pendown()
@@ -31,7 +30,7 @@ class Hangman_Drawing:
         self.tim.right(90)
         self.tim.forward(60)
 
-        self.reset_pen("black", 5)  # switch to black for hangman
+        self.reset_pen("black", 5)  
 
     def draw_head(self):
         self.tim.right(90)
