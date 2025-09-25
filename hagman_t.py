@@ -72,38 +72,208 @@ class Hangman_Drawing:
 
 
 
-# Math-related words with hints
 words = {
     'algebra': "I speak with letters, but I always mean numbers. Who am I?",
-    'algorithm': "I'm a recipe, not for food but for solutions.",
+    'algorithm': "I’m a set of steps, precise and neat, follow me through and problems retreat.",
     'angle': "I measure the turn when two lines decide to meet.",
-    'area': "I tell you how much paint you need to cover the floor."
+    'area': "I tell you how much paint you need to cover the floor.",
+    'axiom': "I’m the rule everyone accepts without argument.",
+    'binomial': "I come in twos, joined by a plus or minus.",
+    'calculus': "I’m the math of change, both instant and vast.",
+    'circle': "I’m round and endless, with no beginning or end.",
+    'coefficient': "I sit in front of a variable, powerful yet quiet.",
+    'combinatorics': "I count choices, orders, and possibilities.",
+    'cone': "Pointy at the top, round at the bottom, like ice-cream.",
+    'congruence': "When sides and angles all agree, two figures become copies of me.",
+    'cosine': "Adjacent over hypotenuse — that’s my claim to fame.",
+    'cylinder': "I look like a soda can — round top, round bottom.",
+    'denominator': "I live under the fraction line.",
+    'derivative': "I’m the slope’s secret twin — instant change.",
+    'diameter': "I cross the circle through its heart.",
+    'dimension': "From a point to a line, a plane to a cube — I measure the degrees of freedom in your group.",
+    'distribution': "I scatter values — sometimes normal, sometimes wild.",
+    'divisor': "I divide numbers cleanly, leaving nothing behind.",
+    'ellipse': "Not a circle, not a line — I balance on two foci.",
+    'equation': "Two sides of me must always agree.",
+    'exponent': "I sit high and make numbers explode.",
+    'factorial': "I’m a countdown party — each number joins the multiplication train.",
+    'fibonacci': "I grow remembering my last two steps.",
+    'fraction': "I’m a slice of the whole pie.",
+    'function': "Give me input, I’ll always return output.",
+    'geometry': "I’m the art of shapes and spaces.",
+    'gradient': "Change in y over change in x — that’s my secret formula.",
+    'graph': "Axes, points, lines — I reveal patterns hidden in numbers.",
+    'hypotenuse': "Across from 90°, I stand the longest of all.",
+    'identity': "I never change, I stay the same in every case.",
+    'inequality': "I’m not equal — greater or lesser, that’s me.",
+    'infinity': "I never end, never stop — forever.",
+    'integral': "I collect tiny parts into a whole curve.",
+    'intersection': "Where sets shake hands and meet.",
+    'inverse': "I undo what’s been done — the great reverser.",
+    'irrational': "I never repeat, never end, but real nonetheless.",
+    'isosceles': "I can’t help having two equal sides.",
+    'limit': "I’m what you approach but may never reach.",
+    'line': "I stretch forever, straight and unbending.",
+    'logarithm': "I tell you the exponent that got you here.",
+    'mean': "Add them all up, then share them equally — that’s me.",
+    'median': "I’m the middle child of data.",
+    'mode': "I love popularity — I appear the most.",
+    'multiple': "I’m born when numbers repeat themselves.",
+    'negative': "I live below zero, the opposite of positive.",
+    'normal': "I stand tall — perpendicular and fair.",
+    'numerator': "I proudly sit on top of fractions.",
+    'octagon': "I wear eight sides like armor.",
+    'parallel': "Like best friends walking forever, but never hugging.",
+    'parabola': "Throw a ball, I’ll show you its path.",
+    'perimeter': "Walk around me, and you measure me.",
+    'permutation': "I care about order — who sits where matters.",
+    'pi': "Endless, irrational, and the circle’s best friend.",
+    'plane': "Flat and endless, like invisible paper.",
+    'point': "No size, but I exist everywhere.",
+    'polygon': "From three to ten (or more!), I’m the many-sided crew.",
+    'polynomial': "I’m powers of x stacked together.",
+    'prime': "Indivisible except by 1 and me.",
+    'probability': "I whisper the odds of what could happen.",
+    'product': "Two numbers meet, and I’m the result of their party.",
+    'proof': "I convince the world with logic.",
+    'proportion': "Two ratios, perfectly balanced.",
+    'pyramid': "I point to the sky with a polygon base.",
+    'quadratic': "I always curve into a U-shape.",
+    'quotient': "I’m what you get when you divide.",
+    'radius': "From circle’s center to its edge, that’s me.",
+    'range': "I measure the gap between high and low.",
+    'ratio': "I compare two numbers simply.",
+    'rectangle': "I have right angles everywhere.",
+    'rhombus': "Equal sides, tilted square.",
+    'scalar': "Just a number — no direction attached.",
+    'sequence': "Numbers marching in order.",
+    'set': "I gather unique objects into one family.",
+    'sine': "Opposite side divided by hypotenuse — that’s me.",
+    'sphere': "I’m a perfect 3D ball.",
+    'square': "Equal sides, right corners — perfection.",
+    'statistics': "I make numbers tell a story.",
+    'subtraction': "I take away and leave what’s left.",
+    'sum': "I’m the result of adding up.",
+    'symmetry': "Flip me, turn me — I stay the same.",
+    'tangent': "I touch a curve at exactly one spot.",
+    'theorem': "I’m a truth proven with reason.",
+    'triangle': "Three edges, three angles, and endless possibilities.",
+    'variable': "The shape-shifter in every formula.",
+    'vector': "I march with size and direction.",
+    'vertex': "Where edges meet, sharp and clear.",
+    'volume': "Fill me up, pour me out — I keep track of the space about.",
+
+    'atom': "I’m tiny, invisible to eyes, yet I build everything.",
+    'galaxy': "I hold billions of stars — and you’re in one.",
+    'gravity': "I keep you on Earth, not floating away.",
+    'oxygen': "Breathe me or you won’t last a minute.",
+    'volcano': "I explode with fire and lava when angry.",
+    'desert': "Hot, dry, endless sand playground.",
+    'ocean': "I’m salty, deep, and cover most of Earth.",
+    'earthquake': "I shake the ground under your feet.",
+    'rainbow': "I appear when light and raindrops dance.",
+    'tornado': "I spin faster than a dancer, destroying paths.",
+    'tsunami': "I’m the ocean’s sprint, a wave that doesn’t tire.",
+    'mountain': "I stand tall, scraping the sky.",
+    'river': "I flow endlessly, carving the land.",
+    'island': "Water surrounds me — I’m all alone.",
+    'forest': "I’m green, dense, and full of secrets.",
+    'desert': "I burn by day, freeze by night.",
+    'voltage': "I tell electrons where to go and how fast to run.",
+    'current': "I’m the river of electricity.",
+    'neutron': "I’m neutral but vital inside atoms.",
+    'proton': "I’m positive by nature, at an atom’s heart.",
+    'electron': "I’m tiny, negative, always zipping around.",
+    'blackhole': "I eat everything, even light.",
+    'robot': "I follow commands — sometimes smarter than humans.",
+    'rocket': "I leave Earth in fire and thunder.",
+    'planet': "I orbit stars — some are home to life.",
+    'asteroid': "I wander space, rocky and wild.",
+    'comet': "I carry icy tails, blazing through space.",
+    'dinosaur': "I stomped, I roared, long before you were born.",
+    'brain': "I’m squishy but smarter than any computer.",
+    'heart': "I pump life nonstop until you stop.",
+    'DNA': "I carry the code that makes you, you.",
+    'cell': "I’m tiny but alive — life’s building block.",
+    'virus': "I invade, multiply, and cause chaos.",
+    'bacteria': "I can help you digest or make you sick.",
+    'engine': "I roar with fuel and make wheels turn.",
+    'bridge': "I connect lands, standing over rivers.",
+    'tower': "I rise high, touching the clouds.",
+    'train': "I run on tracks, carrying stories.",
+    'airplane': "I fly higher than birds.",
+    'internet': "I connect the world in a click.",
+    'computer': "Brilliant assistant, obedient mind.",
+    'python': "I’m a snake, but also a language.",
+    'java': "I’m coffee in a cup, but also code.",
+    'keyboard': "I help you talk to computers.",
+    'mouse': "I’m not squeaky — I click.",
+    'phone': "I ring, buzz, and keep you addicted.",
+    'camera': "I freeze moments in frames.",
+    'music': "I make your soul dance.",
+    'guitar': "Six strings, endless emotions.",
+    'piano': "Black and white soldiers march, and I make them sing.",
+    'football': "I roll, I bounce, I make crowds scream.",
+    'cricket': "Bat, ball, stumps — my game.",
+    'basketball': "I bounce and swish through hoops.",
+    'chess': "I’m war without bloodshed — kings and queens fight here.",
+    'school': "I teach, punish, and prepare you.",
+    'teacher': "I explain things until you understand — or pretend to.",
+    'student': "I learn, procrastinate, and survive exams.",
+    'exam': "I test your memory, not your wisdom.",
+    'holiday': "I’m freedom in the calendar.",
+    'dream': "I’m stories your brain writes at night.",
+    'nightmare': "I scare you while you sleep.",
+    'friend': "I laugh, cry, and fight with you.",
+    'enemy': "I’m your rival, keeping you sharp.",
+    'hero': "I save the day in movies and comics.",
+    'villain': "I make the hero’s life interesting.",
+    'robotics': "I mix mechanics with brains.",
+    'AI': "I mimic your intelligence — sometimes too well.",
+    'machine': "I replace your muscles with gears.",
+    'laser': "I cut, heal, and dazzle with light.",
+    'magnet': "I attract without touching.",
+    'clock': "I chase time but never catch it.",
+    'calendar': "I turn endless days into neat little boxes.",
+    'city': "Tall buildings, traffic, endless lights.",
+    'village': "Quiet, peaceful, with open skies.",
+    'desire': "I burn inside you, pushing you forward.",
+    'fear': "I freeze your body, speed your heart.",
+    'courage': "I face fear and still move forward.",
+    'hope': "I shine even in darkness.",
+    'love': "I make people do crazy things.",
+    'anger': "I burn hotter than fire.",
+    'smile': "I’m the curve that fixes everything.",
+    'laughter': "I’m contagious, spreading happiness.",
+    'sleep': "I recharge you every night.",
+    'hunger': "I roar inside your belly.",
+    'coffee': "I wake you better than alarms.",
+    'tea': "I calm nerves in a cup.",
+    'chocolate': "I melt hearts and mouths alike.",
+    'pizza': "Cheesy, round, loved everywhere.",
+    'burger': "I’m stacked, messy, but worth it.",
+    'fries': "Golden, crispy, addictive sticks.",
+    'icecream': "Cold, sweet, everyone’s guilty pleasure.",
+    'sun': "I shine, burn, and give life.",
+    'moon': "I glow softly, borrowing light.",
+    'star': "I sparkle far away in the dark.",
+    'rain': "I fall, I pour, I refresh.",
+    'snow': "I’m cold, white, and fun to play with.",
+    'wind': "Invisible but felt everywhere.",
+    'storm': "I rumble and flash with fury.",
 }
-
-
-
 
 import turtle
 import random
-from hangman_function import Hangman_Drawing, words
 
-# -----------------------------
-# Setup screen
-# -----------------------------
 screen = turtle.Screen()
 screen.title("Hangman Game")
 screen.setup(width=1.0, height=1.0)  # full screen
 screen.bgcolor("white")
 screen.tracer(0)
 
-# -----------------------------
-# Hangman Drawer
-# -----------------------------
 drawer = Hangman_Drawing()
 
-# -----------------------------
-# Writers
-# -----------------------------
 hint_writer = turtle.Turtle(); hint_writer.hideturtle(); hint_writer.penup()
 word_writer = turtle.Turtle(); word_writer.hideturtle(); word_writer.penup()
 status_writer = turtle.Turtle(); status_writer.hideturtle(); status_writer.penup()
@@ -119,9 +289,6 @@ def display_text(writer, message, x, y, size=18, color="black", align="center"):
     writer.color(color)
     writer.write(message, align=align, font=("Arial", size, "bold"))
 
-# -----------------------------
-# Global state
-# -----------------------------
 chosen_word = ""
 chosen_word_list = []
 word_to_guess = []
@@ -132,12 +299,8 @@ used_letters = set()
 game_over = False
 restart_box = None
 
-# -----------------------------
-# Decorations
-# -----------------------------
 MATH_SYMBOLS = ["π", "√", "∞", "∑", "∫", "∆", "θ", "≈", "≠", "±"]
 
-# In hangman.py, near the top
 DECOR_COLORS = [
     "#FFDAB9",  # Peach Puff
     "#B0E0E6",  # Powder Blue
@@ -155,8 +318,7 @@ def draw_decorations():
     """Draw random math symbols + geometric shapes in pastel colors."""
     deco_writer.clear()
 
-    # Draw random math symbols
-    for _ in range(8):  # more symbols for aesthetics
+    for _ in range(8):  
         x = random.randint(-450, 450)
         y = random.randint(-300, 300)
         deco_writer.goto(x, y)
@@ -164,8 +326,7 @@ def draw_decorations():
         symbol = random.choice(MATH_SYMBOLS)
         deco_writer.write(symbol, align="center", font=("Arial", 18, "bold"))
 
-    # Draw random geometric filled shapes
-    for _ in range(4):  # a few shapes
+    for _ in range(4): 
         x = random.randint(-400, 400)
         y = random.randint(-250, 250)
         size = random.randint(30, 60)
@@ -173,7 +334,7 @@ def draw_decorations():
         deco_writer.goto(x, y)
         deco_writer.pendown()
         color = random.choice(DECOR_COLORS)
-        deco_writer.color(color, color)  # outline + fill same pastel color
+        deco_writer.color(color, color)  
         deco_writer.begin_fill()
         if shape == "circle":
             deco_writer.circle(size)
@@ -188,9 +349,6 @@ def draw_decorations():
         deco_writer.end_fill()
         deco_writer.penup()
 
-# -----------------------------
-# Functions
-# -----------------------------
 def draw_buttons():
     global letter_buttons
     for btn in letter_buttons.values():
@@ -274,25 +432,19 @@ def start_game():
     draw_decorations()
     drawer.draw_gallows()
 
-    # Title + Subtitle
     display_text(title_writer, "Hangman.py", 0, 320, 44, "darkblue")
     display_text(subtitle_writer, "Where Maths meets Python. Solve the puzzle, save the man",
                  0, 280, 20, "purple")
 
-    # Decorations
-    # draw_decorations()
 
-    # Pick a random word + hint
     chosen_word, hint = random.choice(list(words.items()))
     chosen_word = str(chosen_word).strip().upper()
     chosen_word_list = list(chosen_word)
 
     word_to_guess = [ch if not ch.isalpha() else "_" for ch in chosen_word_list]
 
-    # Hint (Q1 center)
     display_text(hint_writer, f"Hint: {hint}", 250, 150, 20, "darkgreen")
 
-    # Word blanks (on +x axis center)
     display_text(word_writer, " ".join(word_to_guess), 200, 50, 30, "black")
 
     parts = [
@@ -339,16 +491,14 @@ def check_guess(letter):
 def click_handler(x, y):
     global used_letters
 
-    # Check restart button click FIRST, always
     if restart_box:
         x1, y1, x2, y2 = restart_box
         if x1 <= x <= x2 and y1 <= y <= y2:
             start_game()
             return
 
-    # Letter buttons click
     if game_over:
-        return  # no letter guesses after game ends
+        return  
 
     for letter, (bx, by) in letter_buttons.items():
         if abs(x - bx) < 20 and abs(y - by) < 20:
@@ -359,9 +509,6 @@ def click_handler(x, y):
             draw_buttons()
             return
 
-# -----------------------------
-# Main
-# -----------------------------
 start_game()
 screen.onclick(click_handler)
 turtle.done()
